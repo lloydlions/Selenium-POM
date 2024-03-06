@@ -1,7 +1,5 @@
 package utils;
 
-import org.testng.annotations.DataProvider;
-
 import java.io.IOException;
 import java.util.List;
 

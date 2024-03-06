@@ -1,5 +1,6 @@
 package e2e.test.ui;
 
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
@@ -26,6 +27,9 @@ public class SampleTest {
     @Test(dataProvider = "data-provider")
     public void testLoginToSauceDemo(String data1, String data2) {
         loginPage.setLoginThenSubmit(data1,data2);
+
+        Assert.assertTrue(loginPage.getPageUrl().contains("/inventory.html"));
+        Assert.assertEquals(loginPage.getPageTitle(),"Swag Labs");
     }
 
     @DataProvider(name = "data-provider", parallel = true)

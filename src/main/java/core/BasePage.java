@@ -37,5 +37,14 @@ public class BasePage {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         wait.until((ExpectedCondition<Boolean>) wd ->
                 ((JavascriptExecutor) wd).executeScript("return document.readyState").equals("complete"));
+        driver.manage().window().maximize();
+    }
+
+    public String getPageTitle(){
+        return driver.getTitle();
+    }
+
+    public String getPageUrl(){
+        return driver.getCurrentUrl();
     }
 }
