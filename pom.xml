@@ -42,6 +42,14 @@
             <artifactId>opencsv</artifactId>
             <version>5.9</version>
         </dependency>
+
+        <!-- Json -->
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20240303</version>
+        </dependency>
+
     </dependencies>
 
     <build>
